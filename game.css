@@ -1,0 +1,219 @@
+body {
+     background-color: #F0F0F0;
+     font-family: arial,sans-serif;
+     margin: 0pt auto;
+     padding: 0pt;
+     width: 920px;
+}
+
+#gameboard {
+     float: left;
+     padding: 20px;
+     width: 550px;
+}
+#share {
+     float: left;
+     clear:left;
+     padding: 20px;
+     width: 550px;
+}
+
+#gameboard .boardrow {
+     clear: both;
+     display: block;
+}
+
+#gameboard .boardplace {
+     float: left;
+     height: 100px;
+     padding: 5px;
+     position: relative;
+     width: 100px;
+}
+
+.square {
+     border: 1px solid #000000;
+     font-size: 2em;
+     height: 50px;
+     padding: 25px;
+     position: absolute;
+     width: 50px;
+     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.boardplace > .square:nth-child(1) {
+     bottom: 0pt;
+     right: 0pt;
+}
+
+.boardplace > .square:nth-child(2) {
+     bottom: 5px;
+     right: 5px;
+}
+
+.boardplace > .square:nth-child(3) {
+     bottom: 10px;
+     right: 10px;
+}
+
+.boardplace > .square:nth-child(4) {
+     bottom: 15px;
+     right: 15px;
+}
+
+.boardplace > .square:nth-child(5) {
+     bottom: 20px;
+     right: 20px;
+}
+
+.neutral {
+     background-color: #CCCCCC;
+     color: #333333;
+}
+.square.neutral {
+     border-color: #888;
+     box-shadow: 1px 1px 0pt #999999, 2px 2px 0pt #999, 3px 3px 0pt #999, 4px 4px 0pt #999;
+}
+
+.red {
+     background-color: #FF0000;
+     color: #FFFFFF;
+}
+
+.square.red {
+     border-color: #770000;
+     box-shadow: 1px 1px 0pt #990000, 2px 2px 0pt #990000, 3px 3px 0pt #990000, 4px 4px 0pt #990000;
+}
+
+.blue {
+     background-color: #0000FF;
+     color: #FFFFFF;
+}
+
+.square.blue {
+     border-color: #000077;
+     box-shadow: 1px 1px 0pt #000099, 2px 2px 0pt #000099, 3px 3px 0pt #000099, 4px 4px 0pt #000099;
+}
+
+.green {
+     background-color: #00FF00;
+     color: #FFFFFF;
+}
+
+.square.green {
+     border-color: #007700;
+     box-shadow: 1px 1px 0pt #009900, 2px 2px 0pt #009900, 3px 3px 0pt #009900, 4px 4px 0pt #009900;
+}
+
+.purple {
+     background-color: #8800FF;
+     color: #FFFFFF;
+}
+
+.square.purple {
+     border-color: #470089;
+     box-shadow: 1px 1px 0pt #6400C1, 2px 2px 0pt #6400C1, 3px 3px 0pt #6400C1, 4px 4px 0pt #6400C1;
+}
+
+.orange {
+     background-color: #FF8800;
+     color: #FFFFFF;
+}
+
+.square.orange {
+     border-color: #8C4A00;
+     box-shadow: 1px 1px 0pt #B25F00, 2px 2px 0pt #B25F00, 3px 3px 0pt #B25F00, 4px 4px 0pt #B25F00;
+}
+
+.current {
+     background-image: url("player.png");
+     background-position: 50px 50px;
+     background-repeat: no-repeat;
+}
+
+#scoreboard {
+     background-color: #DDDDDD;
+     border-radius: 10px 10px 10px 10px;
+     float: right;
+     margin-top: 30px;
+     padding: 20px;
+     width: 270px;
+}
+
+#scores {
+     clear: left;
+     font-size: 2em;
+     font-weight: bold;
+}
+
+#scores div {
+     border-radius: 10px 10px 10px 10px;
+     border: 4px solid transparent;
+     margin: 0pt 0pt 5px;
+     padding: 5px;
+}
+
+#scores .current {
+     border-color: #000000;
+     color: #000000;
+}
+
+#startbutton, #addplayer {
+     background-color: #EEEEEE;
+     border-radius: 20px 20px 20px 20px;
+     border: 2px solid #444444;
+     display: block;
+     font-size: 1.5em;
+     text-align: center;
+}
+
+#controls {
+     background-color: #CCCCCC;
+     border-radius: 10px 10px 10px 10px;
+     border: 5px solid transparent;
+     display: none;
+     margin-top: 10px;
+     overflow: hidden;
+     padding: 5px;
+     text-align: center;
+}
+
+#controls a {
+     color: transparent;
+     display: inline-block;
+}
+
+#moveleft {
+     background: url("controls.png") no-repeat scroll -2px -2px transparent;
+     height: 59px;
+     width: 58px;
+}
+
+#moveup {
+     background: url("controls.png") no-repeat scroll -63px -2px transparent;
+     height: 59px;
+     width: 58px;
+}
+
+#movedown {
+     background: url("controls.png") no-repeat scroll -124px -2px transparent;
+     height: 59px;
+     width: 58px;
+}
+
+#moveright {
+     background: url("controls.png") no-repeat scroll -186px -2px transparent;
+     height: 59px;
+     width: 58px;
+}
+
+#jump {
+     background: url("controls.png") no-repeat scroll -2px -66px transparent;
+     height: 59px;
+     width: 241px;
+}
+
+footer {
+     clear: both;
+     font-size: 0.5em;
+}

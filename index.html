@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>A Game (of sorts)</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  <script src="game.js"></script>
+  <link rel="stylesheet" href="game.css"/>
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1135557-1']);
+    _gaq.push(['_setDomainName', 'webdeveloper2.com']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+  </head>
+  <body>
+   <h1>A Game</h1>
+   <div id="gameboard"></div>
+   <div id="scoreboard">
+   <div id="scores"></div>
+   <div id="startpanel">
+   <ol id="roster">
+   </ol>
+   <a id="addplayer" href="#" onclick="var n = prompt('Player Name:');if(n)game.addPlayer(n); return false;">Add Player</a>
+   <a id="startbutton" href="#" onclick="game.start();return false;">Start Game</a>
+   </div>
+   <div id="controls">
+   <a id="moveup" href="#" title="North" onclick="if(game.isRunning) game.players[game.currentPlayer].moveUp();return false;">W</a> 
+   <a id="movedown" href="#" title="South" onclick="if(game.isRunning) game.players[game.currentPlayer].moveDown();return false;">S</a> 
+   <a id="moveleft" href="#" title="West" onclick="if(game.isRunning) game.players[game.currentPlayer].moveLeft();return false;">A</a> 
+   <a id="moveright" href="#" title="East" onclick="if(game.isRunning) game.players[game.currentPlayer].moveRight();return false;">D</a> 
+   <a id="jump" href="#" title="Up" onclick="if(game.isRunning) game.players[game.currentPlayer].jump();return false;">U</a>
+   <a id="restart" href="#" style="color:#cc0000" onclick="if(confirm('Restart?')){game.restart()};return false;">Restart Game</a>
+   </div>
+    <h3 onclick="$('#rules').slideToggle();">The Rules</h3>
+    <ul id="rules">
+      <li>Players can move north,south,west,east or up (creating a new block).</li>
+      <li>Players can only move onto an unoccupied block.</li>
+      <li>Neutral blocks can be captured from an adjacent block of equal or greater height.</li>
+      <li>Opposition blocks can be captured from an adjacent block of greater height.</li>
+      <li>The game ends when the whole cube is full.</li>
+    </ul>
+    Please tweet any feedback <a href="http://twitter.com/Techn0tic">@Techn0tic</a> or use the <a href="#" onclick="UserVoice.showPopupWidget();return false;">feedback widget</a>.
+   </div>
+   <div id="share">
+   <div id="fb-root"></div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="Techn0tic">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+      <script src="http://connect.facebook.net/en_US/all.js#appId=157439634334648&amp;xfbml=1"></script><fb:like send="false" layout="box_count" width="30" show_faces="false"></fb:like>
+      <div class="g-plusone" data-size="tall"></div>
+      <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="top"></script>
+   </div>
+   <footer>&copy;2011 Dave Kinsella</footer>
+   <script type="text/javascript">
+    var uvOptions = {};
+    (function() {
+      var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+      uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/dk0msaZVa1KTqMxw4Ev66Q.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+    })();
+  </script>
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+  </body>
+</html>

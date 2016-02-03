@@ -1,0 +1,19 @@
+use pusher.com for multiuser messaging
+Detect disconnects - 
+  warn other players
+  initialise reminder system
+  
+  
+Setup
+
+ - invite participants
+ - allow accept or decline
+ - initiator starts game with accepted partipants
+ 
+ 
+ TODO:
+ 
+ refactor game class to remove DOM reliance - store all game state data internally
+ 
+ create ui abstraction classes for 3d, 2d etc.
+ 
